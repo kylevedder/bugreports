@@ -1,0 +1,65 @@
+[100%] Built target run_unit_tests
+0  libLLVM-3.8.so.1 0x00007f95a69a5d38 llvm::sys::PrintStackTrace(llvm::raw_ostream&) + 56
+1  libLLVM-3.8.so.1 0x00007f95a69a3fc6 llvm::sys::RunSignalHandlers() + 54
+2  libLLVM-3.8.so.1 0x00007f95a69a4129
+3  libc.so.6        0x00007f95a5ae04b0
+4  clang            0x0000000001420750 clang::Decl::castFromDeclContext(clang::DeclContext const*) + 0
+5  clang            0x0000000000798889
+6  clang            0x0000000000807744 clang::CodeGen::CodeGenFunction::GetVTTParameter(clang::GlobalDecl, bool, bool) + 68
+7  clang            0x000000000078feb1
+8  clang            0x0000000000802a36 clang::CodeGen::CodeGenFunction::destroyCXXObject(clang::CodeGen::CodeGenFunction&, clang::CodeGen::Address, clang::QualType) + 70
+9  clang            0x00000000008152c5 clang::CodeGen::CodeGenFunction::emitDestroy(clang::CodeGen::Address, clang::QualType, void (*)(clang::CodeGen::CodeGenFunction&, clang::CodeGen::Address, clang::QualType), bool) + 837
+10 clang            0x000000000080c2ac
+11 clang            0x000000000080fbcd clang::CodeGen::CodeGenFunction::PopCleanupBlock(bool) + 2285
+12 clang            0x0000000000810d0a clang::CodeGen::CodeGenFunction::PopCleanupBlocks(clang::CodeGen::EHScopeStack::stable_iterator) + 58
+13 clang            0x0000000000810d4e clang::CodeGen::CodeGenFunction::PopCleanupBlocks(clang::CodeGen::EHScopeStack::stable_iterator, unsigned long) + 30
+14 clang            0x000000000071cfc1 clang::CodeGen::CodeGenFunction::EmitReturnStmt(clang::ReturnStmt const&) + 673
+15 clang            0x000000000071e55b clang::CodeGen::CodeGenFunction::EmitStmt(clang::Stmt const*) + 459
+16 clang            0x000000000071e8ff clang::CodeGen::CodeGenFunction::EmitCompoundStmtWithoutScope(clang::CompoundStmt const&, bool, clang::CodeGen::AggValueSlot) + 95
+17 clang            0x00000000007390b2 clang::CodeGen::CodeGenFunction::EmitFunctionBody(clang::CodeGen::FunctionArgList&, clang::Stmt const*) + 162
+18 clang            0x00000000007417c9 clang::CodeGen::CodeGenFunction::GenerateCode(clang::GlobalDecl, llvm::Function*, clang::CodeGen::CGFunctionInfo const&) + 1289
+19 clang            0x0000000000756ca3 clang::CodeGen::CodeGenModule::EmitGlobalFunctionDefinition(clang::GlobalDecl, llvm::GlobalValue*) + 307
+20 clang            0x0000000000765cdb clang::CodeGen::CodeGenModule::EmitGlobalDefinition(clang::GlobalDecl, llvm::GlobalValue*) + 251
+21 clang            0x0000000000766910 clang::CodeGen::CodeGenModule::EmitGlobal(clang::GlobalDecl) + 1136
+22 clang            0x0000000000767211
+23 clang            0x0000000000a19d73
+24 clang            0x0000000000a15cbc
+25 clang            0x0000000000b36e56 clang::ParseAST(clang::Sema&, bool, bool) + 646
+26 clang            0x000000000099aa0e clang::FrontendAction::Execute() + 302
+27 clang            0x0000000000970406 clang::CompilerInstance::ExecuteAction(clang::FrontendAction&) + 278
+28 clang            0x0000000000a152b3 clang::ExecuteCompilerInvocation(clang::CompilerInstance*) + 1987
+29 clang            0x00000000006b3528 cc1_main(llvm::ArrayRef<char const*>, char const*, void*) + 2264
+30 clang            0x00000000006affbc main + 6252
+31 libc.so.6        0x00007f95a5acb830 __libc_start_main + 240
+32 clang            0x00000000006b1969 _start + 41
+Stack dump:
+0.	Program arguments: /usr/lib/llvm-3.8/bin/clang -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name fourgrid_individual_to_joint.cc -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /home/kyle/code/minutebots/build/CMakeFiles/fourgrind_individual_to_joint.dir/src/search/fourgrid/fourgrid_individual_to_joint.cc.o -resource-dir /usr/lib/llvm-3.8/bin/../lib/clang/3.8.0 -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtOpenGL -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -D QT_CORE_LIB -D QT_GUI_LIB -D QT_NO_DEBUG -D QT_OPENGL_LIB -I /home/kyle/code/minutebots/build -I /home/kyle/code/minutebots -I /home/kyle/code/minutebots/src -I /home/kyle/code/minutebots/third_party -I /usr/local/include/luajit-2.0 -I /usr/local/include -I /usr/include/eigen3 -I /home/kyle/code/minutebots/third_party/googletest/googletest-release-1.8.0/googletest/include -I /home/kyle/code/minutebots/third_party/googletest/googletest-release-1.8.0/googletest -D NDEBUG -D NDEBUG -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/backward -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-3.8/bin/../lib/clang/3.8.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -Wsign-compare -Werror -std=c++11 -fdeprecated-macro -fdebug-compilation-dir /home/kyle/code/minutebots/build -ferror-limit 19 -fmessage-length 211 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -fcolor-diagnostics -vectorize-loops -vectorize-slp -o CMakeFiles/fourgrind_individual_to_joint.dir/src/search/fourgrid/fourgrid_individual_to_joint.cc.o -x c++ /home/kyle/code/minutebots/src/search/fourgrid/fourgrid_individual_to_joint.cc 
+1.	/home/kyle/code/minutebots/src/search/fourgrid/fourgrid_individual_to_joint.cc:60:1: current parser token 'int'
+2.	/home/kyle/code/minutebots/src/search/fourgrid/fourgrid_individual_to_joint.cc:47:10: LLVM IR generation of declaration 'MakeSplit'
+3.	/home/kyle/code/minutebots/src/search/fourgrid/fourgrid_individual_to_joint.cc:47:10: Generating code for declaration 'MakeSplit'
+clang: error: unable to execute command: Segmentation fault (core dumped)
+clang: error: clang frontend command failed due to signal (use -v to see invocation)
+clang version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+clang: note: diagnostic msg: PLEASE submit a bug report to http://llvm.org/bugs/ and include the crash backtrace, preprocessed source, and associated run script.
+clang: note: diagnostic msg: 
+********************
+
+PLEASE ATTACH THE FOLLOWING FILES TO THE BUG REPORT:
+Preprocessed source(s) and associated run script(s) are located at:
+clang: note: diagnostic msg: /tmp/fourgrid_individual_to_joint-a86f55.cpp
+clang: note: diagnostic msg: /tmp/fourgrid_individual_to_joint-a86f55.sh
+clang: note: diagnostic msg: 
+
+********************
+CMakeFiles/fourgrind_individual_to_joint.dir/build.make:62: recipe for target 'CMakeFiles/fourgrind_individual_to_joint.dir/src/search/fourgrid/fourgrid_individual_to_joint.cc.o' failed
+make[3]: *** [CMakeFiles/fourgrind_individual_to_joint.dir/src/search/fourgrid/fourgrid_individual_to_joint.cc.o] Error 254
+CMakeFiles/Makefile2:1706: recipe for target 'CMakeFiles/fourgrind_individual_to_joint.dir/all' failed
+make[2]: *** [CMakeFiles/fourgrind_individual_to_joint.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+Makefile:26: recipe for target 'all' failed
+make: *** [all] Error 2
+kyle@envme:~/code/minutebots$ 
