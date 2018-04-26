@@ -1,0 +1,68 @@
+0  libLLVM-3.8.so.1 0x00007fcdd9356d38 llvm::sys::PrintStackTrace(llvm::raw_ostream&) + 56
+1  libLLVM-3.8.so.1 0x00007fcdd9354fc6 llvm::sys::RunSignalHandlers() + 54
+2  libLLVM-3.8.so.1 0x00007fcdd9355129
+3  libc.so.6        0x00007fcdd84914b0
+4  clang            0x000000000150bcd0 clang::TemplateSpecializationType const* clang::Type::getAs<clang::TemplateSpecializationType>() const + 16
+5  clang            0x00000000013b0ca8
+6  clang            0x00000000013b90f2
+7  clang            0x00000000013bb4f9 clang::FormatASTNodeDiagnosticArgument(clang::DiagnosticsEngine::ArgumentKind, long, llvm::StringRef, llvm::StringRef, llvm::ArrayRef<std::pair<clang::DiagnosticsEngine::ArgumentKind, long> >, llvm::SmallVectorImpl<char>&, void*, llvm::ArrayRef<long>) + 793
+8  clang            0x00000000006bc157 clang::Diagnostic::FormatDiagnostic(char const*, char const*, llvm::SmallVectorImpl<char>&) const + 1143
+9  clang            0x00000000006bce14 clang::Diagnostic::FormatDiagnostic(char const*, char const*, llvm::SmallVectorImpl<char>&) const + 4404
+10 clang            0x00000000009d8739 clang::TextDiagnosticPrinter::HandleDiagnostic(clang::DiagnosticsEngine::Level, clang::Diagnostic const&) + 89
+11 clang            0x00000000006becd0 clang::DiagnosticIDs::EmitDiag(clang::DiagnosticsEngine&, clang::DiagnosticIDs::Level) const + 64
+12 clang            0x00000000006bef36 clang::DiagnosticIDs::ProcessDiag(clang::DiagnosticsEngine&) const + 374
+13 clang            0x00000000006b8344 clang::DiagnosticsEngine::EmitCurrentDiagnostic(bool) + 84
+14 clang            0x0000000000cbf82a clang::Sema::EmitCurrentDiagnostic(unsigned int) + 1386
+15 clang            0x0000000000cb071b
+16 clang            0x0000000000ed73e1 clang::InitializationSequence::Diagnose(clang::Sema&, clang::InitializedEntity const&, clang::InitializationKind const&, llvm::ArrayRef<clang::Expr*>) + 7409
+17 clang            0x0000000000ed96b5 clang::InitializationSequence::Perform(clang::Sema&, clang::InitializedEntity const&, clang::InitializationKind const&, llvm::MutableArrayRef<clang::Expr*>, clang::QualType*) + 8245
+18 clang            0x0000000000edb88b clang::Sema::PerformCopyInitialization(clang::InitializedEntity const&, clang::SourceLocation, clang::ActionResult<clang::Expr*, true>, bool, bool) + 251
+19 clang            0x0000000000f8c250 clang::Sema::PerformMoveOrCopyInitialization(clang::InitializedEntity const&, clang::VarDecl const*, clang::QualType, clang::Expr*, bool) + 608
+20 clang            0x0000000000fa458c clang::Sema::BuildReturnStmt(clang::SourceLocation, clang::Expr*) + 1532
+21 clang            0x00000000010284da
+22 clang            0x0000000001036b75
+23 clang            0x000000000103800b
+24 clang            0x000000000103813b
+25 clang            0x0000000001036e75
+26 clang            0x000000000103ab3f clang::Sema::SubstStmt(clang::Stmt*, clang::MultiLevelTemplateArgumentList const&) + 95
+27 clang            0x000000000104cb8e clang::Sema::InstantiateFunctionDefinition(clang::SourceLocation, clang::FunctionDecl*, bool, bool) + 3742
+28 clang            0x0000000001040995 clang::Sema::InstantiateClassMembers(clang::SourceLocation, clang::CXXRecordDecl*, clang::MultiLevelTemplateArgumentList const&, clang::TemplateSpecializationKind) + 1493
+29 clang            0x0000000001040af6 clang::Sema::InstantiateClassTemplateSpecializationMembers(clang::SourceLocation, clang::ClassTemplateSpecializationDecl*, clang::TemplateSpecializationKind) + 86
+30 clang            0x0000000000fe40a5 clang::Sema::ActOnExplicitInstantiation(clang::Scope*, clang::SourceLocation, clang::SourceLocation, unsigned int, clang::SourceLocation, clang::CXXScopeSpec const&, clang::OpaquePtr<clang::TemplateName>, clang::SourceLocation, clang::SourceLocation, llvm::MutableArrayRef<clang::ParsedTemplateArgument>, clang::SourceLocation, clang::AttributeList*) + 1909
+31 clang            0x0000000000b75c79 clang::Parser::ParseClassSpecifier(clang::tok::TokenKind, clang::SourceLocation, clang::DeclSpec&, clang::Parser::ParsedTemplateInfo const&, clang::AccessSpecifier, bool, clang::Parser::DeclSpecContext, clang::Parser::ParsedAttributesWithRange&) + 8265
+32 clang            0x0000000000b55bda clang::Parser::ParseDeclarationSpecifiers(clang::DeclSpec&, clang::Parser::ParsedTemplateInfo const&, clang::AccessSpecifier, clang::Parser::DeclSpecContext, clang::Parser::LateParsedAttrList*) + 5834
+33 clang            0x0000000000bc75db clang::Parser::ParseSingleDeclarationAfterTemplate(unsigned int, clang::Parser::ParsedTemplateInfo const&, clang::ParsingDeclRAIIObject&, clang::SourceLocation&, clang::AccessSpecifier, clang::AttributeList*) + 971
+34 clang            0x0000000000bc8f94 clang::Parser::ParseExplicitInstantiation(unsigned int, clang::SourceLocation, clang::SourceLocation, clang::SourceLocation&, clang::AccessSpecifier) + 164
+35 clang            0x0000000000bc9146 clang::Parser::ParseDeclarationStartingWithTemplate(unsigned int, clang::SourceLocation&, clang::AccessSpecifier, clang::AttributeList*) + 278
+36 clang            0x0000000000b604f7 clang::Parser::ParseDeclaration(unsigned int, clang::SourceLocation&, clang::Parser::ParsedAttributesWithRange&) + 583
+37 clang            0x0000000000b41201 clang::Parser::ParseExternalDeclaration(clang::Parser::ParsedAttributesWithRange&, clang::ParsingDeclSpec*) + 321
+38 clang            0x0000000000b41bec clang::Parser::ParseTopLevelDecl(clang::OpaquePtr<clang::DeclGroupRef>&) + 460
+39 clang            0x0000000000b36e3b clang::ParseAST(clang::Sema&, bool, bool) + 619
+40 clang            0x000000000099aa0e clang::FrontendAction::Execute() + 302
+41 clang            0x0000000000970406 clang::CompilerInstance::ExecuteAction(clang::FrontendAction&) + 278
+42 clang            0x0000000000a152b3 clang::ExecuteCompilerInvocation(clang::CompilerInstance*) + 1987
+43 clang            0x00000000006b3528 cc1_main(llvm::ArrayRef<char const*>, char const*, void*) + 2264
+44 clang            0x00000000006affbc main + 6252
+45 libc.so.6        0x00007fcdd847c830 __libc_start_main + 240
+46 clang            0x00000000006b1969 _start + 41
+Stack dump:
+0.	Program arguments: /usr/lib/llvm-3.8/bin/clang -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name dstar_fourgrid_solver.cc -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /home/kyle/code/minutebots/build/CMakeFiles/fourgrid_library.dir/src/search/fourgrid/dstar_fourgrid_solver.cc.o -resource-dir /usr/lib/llvm-3.8/bin/../lib/clang/3.8.0 -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtOpenGL -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -D QT_CORE_LIB -D QT_GUI_LIB -D QT_NO_DEBUG -D QT_OPENGL_LIB -I /home/kyle/code/minutebots/build -I /home/kyle/code/minutebots -I /home/kyle/code/minutebots/src -I /home/kyle/code/minutebots/third_party -I /usr/local/include/luajit-2.0 -I /usr/local/include -I /usr/include/eigen3 -I /home/kyle/code/minutebots/third_party/googletest/googletest-release-1.8.0/googletest/include -I /home/kyle/code/minutebots/third_party/googletest/googletest-release-1.8.0/googletest -D NDEBUG -D NDEBUG -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/backward -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-3.8/bin/../lib/clang/3.8.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -Wsign-compare -Werror -std=c++11 -fdeprecated-macro -fdebug-compilation-dir /home/kyle/code/minutebots/build -ferror-limit 19 -fmessage-length 207 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -fcolor-diagnostics -vectorize-loops -vectorize-slp -o CMakeFiles/fourgrid_library.dir/src/search/fourgrid/dstar_fourgrid_solver.cc.o -x c++ /home/kyle/code/minutebots/src/search/fourgrid/dstar_fourgrid_solver.cc 
+1.	/home/kyle/code/minutebots/src/search/fourgrid/dstar_fourgrid_solver.cc:462:71: current parser token ';'
+clang: error: unable to execute command: Segmentation fault (core dumped)
+clang: error: clang frontend command failed due to signal (use -v to see invocation)
+clang version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+clang: note: diagnostic msg: PLEASE submit a bug report to http://llvm.org/bugs/ and include the crash backtrace, preprocessed source, and associated run script.
+clang: note: diagnostic msg: 
+********************
+
+PLEASE ATTACH THE FOLLOWING FILES TO THE BUG REPORT:
+Preprocessed source(s) and associated run script(s) are located at:
+clang: note: diagnostic msg: /tmp/dstar_fourgrid_solver-9944a3.cpp
+clang: note: diagnostic msg: /tmp/dstar_fourgrid_solver-9944a3.sh
+clang: note: diagnostic msg: 
+
+********************
+
